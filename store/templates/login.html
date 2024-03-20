@@ -15,7 +15,7 @@
           <br>
           <br>
             <div class="col-md-6">
-                <form method="post" Action="{% url 'login' %}"> 
+                <form method="POST" Action="{% url 'login' %}"> 
                   {% csrf_token %}
                     <div class="mb-3">
                       <input type="text" class="form-control" name="username" placeholder="Enter Your Username"  >
