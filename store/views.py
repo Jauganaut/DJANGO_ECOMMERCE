@@ -14,7 +14,7 @@ def category(request, foo):
     try:
         #look up the category
         category = Category.objects.get(name=foo)
-        products = Products.objects.filter(category=category)
+        products = Product.objects.filter(category=category)
         return render(request, 'category.html',{'products:products', 'category:category'})
     except:
         messages.success(request,("That Category Doesn't Exist..."))
